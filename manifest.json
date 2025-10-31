@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "域名自动替换工具",
+    "version": "1.1",
+    "description": "可自定义域名替换规则的浏览器扩展",
+    "permissions": ["declarativeNetRequest", "storage"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "域名替换工具",
+        "default_popup": "popup.html"  // 添加弹出页面配置
+    },
+    "declarative_net_request": {
+        "rule_resources": [{
+            "id": "ruleset_1",
+            "enabled": true,
+            "path": "rules.json"
+        }]
+    }
+}
+    
