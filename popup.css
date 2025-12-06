@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+.container {
+  width: 400px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 16px;
+  color: #555;
+  margin: 15px 0 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #4285f4;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background: #3367d6;
+}
+
+.import-export button {
+  width: calc(50% - 5px);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.import-export button:last-child {
+  margin-right: 0;
+}
+
+#rulesList {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+#rulesList li {
+  padding: 8px;
+  border-bottom: 1px dashed #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+#rulesList li:last-child {
+  border-bottom: none;
+}
+
+.rule-text {
+  flex: 1;
+  color: #333;
+}
+
+.delete-btn {
+  background: #ea4335;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-bottom: 0;
+  width: auto;
+}
+
+.delete-btn:hover {
+  background: #d93025;
+}
+
+.tip {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  margin-top: 10px;
+}

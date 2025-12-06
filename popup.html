@@ -1,73 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <title>域名替换设置</title>
-    <style>
-        body {
-            width: 350px;
-            padding: 15px;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            margin-bottom: 15px;
-        }
-        input {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 5px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        .rule-item {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .rule-actions button {
-            background-color: #f44336;
-            padding: 4px 8px;
-            font-size: 12px;
-        }
-        .rule-actions button:first-child {
-            background-color: #2196F3;
-            margin-right: 5px;
-        }
-        h3 {
-            margin-top: 0;
-            color: #333;
-        }
-    </style>
+  <meta charset="UTF-8">  <!-- 关键：解决中文乱码 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>域名替换规则管理</title>
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <h3>自定义域名替换</h3>
+  <div class="container">
+    <h1>域名替换规则管理</h1>
     
-    <div class="container">
-        <input type="text" id="originalDomain" placeholder="原始域名 (如: south-plus.net)">
-        <input type="text" id="targetDomain" placeholder="目标域名 (如: bbs.imoutolove.me)">
-        <button id="addRule">添加规则</button>
-    </div>
-    
-    <div id="rulesList">
-        <!-- 规则列表将在这里动态生成 -->
+    <!-- 规则添加区域 -->
+    <div class="rule-form">
+      <div class="form-group">
+        <label for="originalDomain">原始域名（如：south-plus.net）</label>
+        <input type="text" id="originalDomain" placeholder="输入需要替换的原始域名">
+      </div>
+      <div class="form-group">
+        <label for="targetDomain">目标域名（如：bbs.imoutolove.me）</label>
+        <input type="text" id="targetDomain" placeholder="输入替换后的目标域名">
+      </div>
+      <button id="addRuleBtn">添加规则</button>
     </div>
 
-    <script src="popup.js"></script>
+    <!-- 规则列表区域 -->
+    <div class="rule-list">
+      <h2>已添加规则</h2>
+      <ul id="rulesList"></ul>
+    </div>
+
+    <!-- 导出/导入区域 -->
+    <div class="import-export">
+      <button id="exportBtn">导出规则（JSON）</button>
+      <input type="file" id="importFile" accept=".json" style="display: none;">
+      <button id="importBtn">导入规则（JSON）</button>
+      <p class="tip">提示：导出的规则为JSON文件，可用于备份或分享</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
 </html>
-    
