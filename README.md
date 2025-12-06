@@ -1,5 +1,5 @@
 # DomainReplacer
-自动替换域名
+自动替换域名，自定义替换后的域名和被替换的域名
 
 因为部分[南+ South Plus](https://south-plus.net "南+ South Plus")的子域名可以直连，所以用豆包写了这个浏览器插件
 
