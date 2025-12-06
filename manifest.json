@@ -10,7 +10,7 @@
     ],
     "host_permissions": ["<all_urls>"],
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "background.js"  // 补全文件路径，之前为空
     },
     "action": {
         "default_title": "域名替换工具",
