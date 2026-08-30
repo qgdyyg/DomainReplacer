@@ -113,3 +113,112 @@ button:hover {
   text-align: center;
   margin-top: 10px;
 }
+
+/* ===== 批量选择 / 编辑功能 ===== */
+.hidden {
+  display: none !important;
+}
+
+.rule-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0 10px;
+}
+
+.rule-list-header h2 {
+  margin: 0;
+}
+
+.batch-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.select-all-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.batch-delete-btn {
+  width: auto;
+  padding: 4px 10px;
+  font-size: 12px;
+  margin: 0;
+  background: #ea4335;
+  white-space: nowrap;
+}
+
+.batch-delete-btn:hover {
+  background: #d93025;
+}
+
+.batch-delete-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+#rulesList li {
+  gap: 6px;
+}
+
+#rulesList li.editing {
+  background: #fff8e1;
+  border-radius: 4px;
+}
+
+.rule-check {
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.rule-text {
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rule-text:hover {
+  color: #4285f4;
+  text-decoration: underline;
+}
+
+.edit-btn {
+  background: #fbbc05;
+  color: #333;
+  padding: 4px 8px;
+  font-size: 12px;
+  margin-bottom: 0;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.edit-btn:hover {
+  background: #f9ab00;
+}
+
+.cancel-btn {
+  background: #999;
+}
+
+.cancel-btn:hover {
+  background: #888;
+}
+
+#editHint {
+  display: none;
+  color: #b06000;
+  text-align: left;
+}
+
+#editHint.visible {
+  display: block;
+}

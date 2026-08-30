@@ -1,20 +1,31 @@
 {
     "manifest_version": 3,
     "name": "域名替换工具（带规则管理）",
-    "version": "1.2",
+    "version": "1.5",
     "description": "自定义域名替换+导出导入规则",
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
     "permissions": [
         "declarativeNetRequest",
-        "storage",
-        "downloads"
+        "storage"
     ],
     "host_permissions": ["<all_urls>"],
     "background": {
-        "service_worker": "background.js"  // 补全文件路径，之前为空
+        "service_worker": "background.js"
     },
     "action": {
         "default_title": "域名替换工具",
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "32": "icons/icon32.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        }
     },
     "declarative_net_request": {
         "rule_resources": [

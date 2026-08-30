@@ -9,8 +9,8 @@
 <body>
   <div class="container">
     <h1>域名替换规则管理</h1>
-    
-    <!-- 规则添加区域 -->
+
+    <!-- 规则添加/编辑区域 -->
     <div class="rule-form">
       <div class="form-group">
         <label for="originalDomain">原始域名（如：south-plus.net）</label>
@@ -20,13 +20,25 @@
         <label for="targetDomain">目标域名（如：bbs.imoutolove.me）</label>
         <input type="text" id="targetDomain" placeholder="输入替换后的目标域名">
       </div>
+      <!-- 新增模式 -->
       <button id="addRuleBtn">添加规则</button>
+      <!-- 编辑模式（默认隐藏） -->
+      <button id="saveEditBtn" class="hidden">保存修改</button>
+      <button id="cancelEditBtn" class="hidden cancel-btn">取消编辑</button>
+      <p class="tip" id="editHint"></p>
     </div>
 
     <!-- 规则列表区域 -->
     <div class="rule-list">
-      <h2>已添加规则</h2>
+      <div class="rule-list-header">
+        <h2>已添加规则</h2>
+        <div class="batch-actions">
+          <label class="select-all-label"><input type="checkbox" id="selectAll">全选</label>
+          <button id="batchDeleteBtn" class="batch-delete-btn" disabled>删除选中</button>
+        </div>
+      </div>
       <ul id="rulesList"></ul>
+      <p class="tip">提示：点击规则文字可快速编辑</p>
     </div>
 
     <!-- 导出/导入区域 -->
